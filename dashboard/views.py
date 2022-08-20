@@ -63,8 +63,17 @@ class ItemListView( TemplateView):
         product_list = Product.objects.all().order_by("-id")
         context['product_list'] = product_list
         return context
-        
-
+  
+  
+  
+class CustomersView(TemplateView):
+    template_name='skeleton/customers_list.html'
+    
+    def get_context_data(self, **kwargs):
+        customers = Customer.objects.get()
+        context['customers'] = customers
+        return customers
+    
 #view item details for customer
 class ItemDetailView(TemplateView):
     template_name ='skeleton/make_order.html'

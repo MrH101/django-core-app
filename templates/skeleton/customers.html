@@ -1,0 +1,35 @@
+{% extends 'body/base.html' %}  
+{% block title %}Orders{% endblock  %}
+
+
+{% block content %}
+
+{% include 'body/navbar.html' %}
+
+<!--Table-->
+<div class="container">
+    <div class="row my-4">
+        
+        <div class="col-md-8">
+            <table class="table bg-white">
+                <thead class="bg-info">
+                    <tr class="text-white">
+                        <th scope="col">#</th>
+                        <th scope="col">Customner Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">No of Orders</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+<!--End Table-->
+
+
+{% endblock  %}

@@ -11,7 +11,8 @@ from .views import (
     CheckoutView,
     AdminDashView,
     OrderDetailView,
-    ChangeStatusView
+    ChangeStatusView,
+    CustomersView,
 )
 
 
@@ -29,6 +30,7 @@ urlpatterns = [
     path("empty_cart/", EmptyCartView.as_view(), name="empty_cart"),##check
     path("checkout/", CheckoutView.as_view(), name="checkout"),
     path("admin_dash/", AdminDashView.as_view(), name="admin_dash"),
+    path("customers/", CustomersView.as_view(), name="customers"),
     path("order_detail/<int:pk>/", OrderDetailView.as_view(),
          name="order_detail"),
     path("order_detail-<int:pk>-change/",
